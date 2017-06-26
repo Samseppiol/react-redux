@@ -22,3 +22,10 @@
 
 #### Class 
 > Any class made must have a render method
+
+#### Handling Events
+> Declare an Event handler, function that runs whenever the event occurs
+> Pass the event handler to the element that we want to monitor for events.
+
+> Event handler arguments should be called event
+> Event object describes what is happening
