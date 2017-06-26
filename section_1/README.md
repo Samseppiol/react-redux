@@ -46,3 +46,6 @@
 
 > Only within constructor do you manipulate this.state
 > When you want to change the state outside of a constructor you use this.setState
+
+## Controlled Components
+> When the values are set by the state, so its value only ever changes when the state changes.
