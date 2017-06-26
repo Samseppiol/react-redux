@@ -1,9 +1,10 @@
+// Importing react as a javascript module
 import React from 'react';
-
+import ReactDOM from 'react-dom';
 // Want to create a new component
 //  it should produce some html 
 
-const App = function() {
+const App = () => {
   return <div>Hi!</div>;
 }
 
@@ -12,4 +13,4 @@ const App = function() {
 
 // Wont work, react is undefined
 // Need to import React at the top of the file.
-React.render(App);
+ReactDOM.render(<App />, document.querySelector('.container') );
