@@ -1,6 +1,8 @@
 // Importing react as a javascript module
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+const API_KEY = 'AIzaSyAEHNh8n3YmrJuepd4_bhzzTEgDfE6s_tk'
 // Want to create a new component
 //  it should produce some html 
 
