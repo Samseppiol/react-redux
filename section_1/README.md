@@ -43,3 +43,6 @@
 ## Constructor 
 > Runs automatically in class based components. 
 > Initialises variables etc, sounds very similar to initialise method in ruby.
+
+> Only within constructor do you manipulate this.state
+> When you want to change the state outside of a constructor you use this.setState
