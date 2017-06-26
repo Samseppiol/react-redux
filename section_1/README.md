@@ -16,3 +16,6 @@
 
 #### Self closing 
 > Can use self closing tags for html like so '< hello world /> '
+
+## More Notes
+> Always have one component per file
