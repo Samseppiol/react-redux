@@ -29,3 +29,17 @@
 
 > Event handler arguments should be called event
 > Event object describes what is happening
+
+
+## State 
+> ONLY CLASS BASED COMPONENTS, functional components do not have state
+> State is a javascript object used to record and react to user events. 
+> Each class based compoonent we define has its own state object. 
+> Whenever a component state is changed the component immediately re renders and forces all of its children to re render as well.
+
+> Whenever we use state we have to initialise it with ' this.state = '
+
+
+## Constructor 
+> Runs automatically in class based components. 
+> Initialises variables etc, sounds very similar to initialise method in ruby.
