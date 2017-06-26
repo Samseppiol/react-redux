@@ -19,3 +19,6 @@
 
 ## More Notes
 > Always have one component per file
+
+#### Class 
+> Any class made must have a render method
