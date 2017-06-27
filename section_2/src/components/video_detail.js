@@ -1,6 +1,11 @@
 import React from 'react'
 
 const VideoDetail = ({video}) => {
+
+  if (!video) {
+    return <div>Lemon internet connection is taking to long</div>;
+  }
+
   const videoId = video.id.videoId;
   // String interpolation using backticks
   const url = `https://www.youtube.com/embed/${videoId}`;
