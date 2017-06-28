@@ -23,11 +23,17 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { videos: [] };
+    this.state = { 
+    videos: [],
+    selectedVideo: null 
+  };
 
-    YTSearch({key: API_KEY, term: 'real madrid'}, (videos) => {
+    YTSearch({key: API_KEY, term: 'champions league'}, (videos) => {
       // this.setState({videos: videos})
-      this.setState({ videos })
+      this.setState({ 
+        videos: videos,
+        // Making the selected video default to the first video within the array
+        selectedVideo: videos[0] })
     });
   }
 
@@ -36,8 +42,11 @@ class App extends Component {
     return (
     <div> 
       <SearchBar />
-      <VideoDetail  video={this.state.videos[0]}/>
-      <VideoList videos={this.state.videos}   />
+      <VideoDetail  video={this.state.selectedVideo }/>
+      <VideoList 
+      /*Updates the state*/
+        onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
+        videos={this.state.videos}   />
     </div>
     );
   };
