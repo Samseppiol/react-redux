@@ -28,20 +28,27 @@ class App extends Component {
     selectedVideo: null 
   };
 
-    YTSearch({key: API_KEY, term: 'champions league'}, (videos) => {
-      // this.setState({videos: videos})
-      this.setState({ 
-        videos: videos,
-        // Making the selected video default to the first video within the array
-        selectedVideo: videos[0] })
-    });
+  this.videoSearch('champions league');
   }
+
+  videoSearch(term) {
+  YTSearch({key: API_KEY, term: term}, (videos) => {
+    // this.setState({videos: videos})
+    this.setState({ 
+    videos: videos,
+    // Making the selected video default to the first video within the array
+    selectedVideo: videos[0] 
+    })
+  });
+  }
+
+
 
 
   render () {
     return (
     <div> 
-      <SearchBar />
+      <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
       <VideoDetail  video={this.state.selectedVideo }/>
       <VideoList 
       /*Updates the state*/
